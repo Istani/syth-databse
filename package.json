@@ -1,8 +1,10 @@
 {
-  "name": "database",
+  "name": "@syth/database",
   "version": "0.0.0",
+  "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "test": "node app.js"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0"
@@ -11,5 +13,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "knex": "^3.1.0",
+    "mysql": "^2.18.1",
+    "objection": "^3.1.5"
   }
 }
