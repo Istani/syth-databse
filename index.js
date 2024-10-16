@@ -16,3 +16,4 @@ exports.RPG_Characters = require('./models/rpg_char.js');
 exports.RPG_Monsters = require('./models/rpg_monster.js');
 exports.RPG_Inventories = require('./models/rpg_inventory.js');
 exports.RPG_Logs = require('./models/rpg_log.js');
+exports.RPG_Items = require('./models/rpg_items.js');
