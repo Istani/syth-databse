@@ -3,7 +3,6 @@ exports.up = function(knex, Promise) {
     t.string("icon", 50).notNull();
     t.string("name", 50).notNull().primary();
     t.integer("heal").notNull().defaultTo(0);
-    t.timestamps(false, false);
   });
 };
 
