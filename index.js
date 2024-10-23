@@ -1,5 +1,4 @@
 var debug = require("@istani/debug")(require('./package.json').name);
-debug.log('Imported');
 
 const Knex = require('knex');
 exports._knex = Knex(require('./knexfile.js'));
