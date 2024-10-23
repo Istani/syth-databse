@@ -1,6 +1,7 @@
 const { Model } = require("objection");
 const Knex = require("knex");
 const emoji = require("node-emoji");
+const moment = require("moment");
 
 const knex = Knex(require("../knexfile.js"));
 
@@ -16,12 +17,13 @@ class Logs extends Model {
 
   $beforeInsert() {
     this.$beforeUpdate();
-    this.id=moment();
+    this.id=moment().format("x");
   }
 
   $beforeUpdate() {
     //this.updated_at = new Date().toISOString();
-    this.display_text = emoji.unemojify(this.display_text);
+    this.message = emoji.unemojify(this.message);
+    this.user = emoji.unemojify(this.user);
   }
 }
 
